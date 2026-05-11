@@ -23,6 +23,13 @@ export default function Nav() {
           >
             Contact
           </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="text-sm text-gray-900 font-medium border border-gray-200 rounded-md px-3 py-1.5 hover:bg-gray-50 transition-colors"
+          >
+            Resume
+          </a>
         </div>
       </nav>
     </header>

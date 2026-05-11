@@ -55,7 +55,13 @@ export default function AboutPage() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-sm text-gray-400 w-24">Resume</span>
-            <span className="text-sm text-gray-400">[Add a link to your resume PDF]</span>
+            <a
+              href="/resume.pdf"
+              download
+              className="text-sm text-gray-900 hover:opacity-60 transition-opacity underline underline-offset-2"
+            >
+              Download PDF
+            </a>
           </div>
         </div>
       </div>
