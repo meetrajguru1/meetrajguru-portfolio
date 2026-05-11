@@ -1,0 +1,108 @@
+import Link from "next/link";
+
+const caseStudies = [
+  {
+    slug: "redesigning-onboarding",
+    title: "Redesigning onboarding to cut time-to-value by 40%",
+    company: "Company name · 2025",
+    description:
+      "How we identified the moment users understood the product, then rebuilt the first 10 minutes around it.",
+  },
+  {
+    slug: "search-zero-results",
+    title: "Solving zero-results search for a B2B SaaS product",
+    company: "Company name · 2024",
+    description:
+      "A deep-dive into why 30% of searches returned nothing, and how fixing it lifted retention.",
+  },
+];
+
+const recentPosts = [
+  {
+    slug: "how-i-think-about-prioritization",
+    title: "How I think about prioritization",
+    date: "May 2026",
+  },
+  {
+    slug: "placeholder-2",
+    title: "What good discovery actually looks like",
+    date: "Coming soon",
+  },
+  {
+    slug: "placeholder-3",
+    title: "Why metrics are the beginning of the conversation, not the end",
+    date: "Coming soon",
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="max-w-2xl mx-auto px-6 py-20">
+      {/* Hero */}
+      <section className="mb-24">
+        <p className="text-sm text-gray-400 mb-3 tracking-wide">Product manager</p>
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+          Building products people actually want to use.
+        </h1>
+        <p className="text-gray-500 leading-relaxed text-lg">
+          I work at the intersection of user needs and business goals — figuring out what to build,
+          why it matters, and how to know if it worked. Currently looking for my next opportunity.
+        </p>
+      </section>
+
+      {/* Selected work */}
+      <section className="mb-24">
+        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-8">
+          Selected work
+        </h2>
+        <div className="space-y-8">
+          {caseStudies.map((cs) => (
+            <Link key={cs.slug} href="/work" className="block group">
+              <p className="text-xs text-gray-400 mb-1">{cs.company}</p>
+              <h3 className="text-base font-medium text-gray-900 mb-2 group-hover:opacity-60 transition-opacity">
+                {cs.title}
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{cs.description}</p>
+            </Link>
+          ))}
+        </div>
+        <Link
+          href="/work"
+          className="inline-block mt-8 text-sm text-gray-400 hover:text-gray-900 transition-colors"
+        >
+          See all work →
+        </Link>
+      </section>
+
+      {/* Recent writing */}
+      <section>
+        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-8">
+          Recent writing
+        </h2>
+        <div className="space-y-5">
+          {recentPosts.map((post) => (
+            <div key={post.slug} className="flex items-baseline justify-between gap-4">
+              {post.date === "Coming soon" ? (
+                <span className="text-sm text-gray-400">{post.title}</span>
+              ) : (
+                <Link
+                  href={`/writing/${post.slug}`}
+                  className="text-sm text-gray-900 hover:opacity-60 transition-opacity"
+                >
+                  {post.title}
+                </Link>
+              )}
+              <span className="text-xs text-gray-400 shrink-0">{post.date}</span>
+            </div>
+          ))}
+        </div>
+        <Link
+          href="/writing"
+          className="inline-block mt-8 text-sm text-gray-400 hover:text-gray-900 transition-colors"
+        >
+          See all writing →
+        </Link>
+      </section>
+    </div>
+  );
+}
