@@ -11,27 +11,26 @@ export default function AboutPage() {
 
       <div className="space-y-6 text-gray-500 leading-relaxed">
         <p>
-          Hi — I'm Meet. I'm a product manager with [X] years of experience building [type of
-          products] for [type of users or industry]. I care deeply about understanding why people do
-          what they do, and translating that into products that actually improve their lives.
+          Hi, I'm Meet Rajguru — a marketing graduate turned aspiring product manager, currently
+          building my career at the intersection of customer experience, business strategy, and
+          technology.
         </p>
 
         <p>
-          Before moving into product, I [brief background — e.g., studied X, worked in Y, or
-          started as Z]. That background shapes how I think: I tend to start with the problem
-          before jumping to solutions, and I believe good process is what you fall back on when
-          intuition runs out.
+          I completed my Master's in Marketing from the University of Technology Sydney and have
+          spent the last few years working across digital marketing, CRM, and retail sales —
+          always gravitating toward the "why" behind products and the problems they solve.
         </p>
 
         <p>
-          Outside of work, I [a couple of genuine personal details — hobbies, interests, things
-          you care about]. I think these matter because they shape how you see the world, and
-          seeing the world differently is half the job.
+          I'm now focused on breaking into product management, documenting that journey here
+          through case studies, product teardowns, and honest writing about what I'm learning
+          along the way.
         </p>
 
         <p>
-          I'm currently [your status — e.g., open to new roles, based in X, looking for Y type of
-          company]. If something resonates, I'd love to talk.
+          I believe you don't need all the answers to start — just curiosity, consistency, and
+          the willingness to keep going.
         </p>
       </div>
 

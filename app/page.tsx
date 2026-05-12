@@ -45,8 +45,8 @@ export default function Home() {
           Building products people actually want to use.
         </h1>
         <p className="text-gray-500 leading-relaxed text-lg">
-          I work at the intersection of user needs and business goals — figuring out what to build,
-          why it matters, and how to know if it worked. Currently looking for my next opportunity.
+          Marketing graduate turned aspiring PM. I write about products, career transitions, and
+          what I'm learning along the way. Currently looking for my next opportunity in product.
         </p>
       </section>
 
