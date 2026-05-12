@@ -44,20 +44,20 @@ export default function WorkPage() {
         learned.
       </p>
 
-      <div className="space-y-16">
+      <div className="space-y-6">
         {caseStudies.map((cs, i) => {
-          const inner = (
+          const cardContent = (
             <>
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-xs text-gray-400">{cs.company}</span>
                 <span className="text-xs text-gray-300">·</span>
                 <span className="text-xs text-gray-400">{cs.year}</span>
               </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3 tracking-tight group-hover:opacity-60 transition-opacity">
+              <h2 className="text-xl font-semibold text-gray-900 mb-3 tracking-tight">
                 {cs.title}
               </h2>
               <p className="text-sm text-gray-500 leading-relaxed mb-4">{cs.description}</p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap mb-4">
                 {cs.tags.map((tag) => (
                   <span
                     key={tag}
@@ -67,24 +67,37 @@ export default function WorkPage() {
                   </span>
                 ))}
               </div>
+              {cs.slug && (
+                <span className="text-sm text-navy font-medium">Read case study →</span>
+              )}
             </>
           );
 
           return cs.slug ? (
-            <Link key={i} href={`/work/${cs.slug}`} className="block group border-t border-gray-100 pt-10">
-              {inner}
+            <Link
+              key={i}
+              href={`/work/${cs.slug}`}
+              className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
+            >
+              {cardContent}
             </Link>
           ) : (
-            <article key={i} className="border-t border-gray-100 pt-10">
-              {inner}
+            <article
+              key={i}
+              className="bg-gray-50 border border-gray-100 rounded-lg p-6"
+            >
+              {cardContent}
             </article>
           );
         })}
       </div>
 
-      <p className="mt-16 text-sm text-gray-400">
+      <p className="mt-12 text-sm text-gray-400">
         Full case studies available on request.{" "}
-        <a href="mailto:mt.rajguru@gmail.com" className="text-gray-900 underline underline-offset-2 hover:opacity-60 transition-opacity">
+        <a
+          href="mailto:mt.rajguru@gmail.com"
+          className="text-navy underline underline-offset-2 hover:text-navy-dark transition-colors"
+        >
           Get in touch.
         </a>
       </p>

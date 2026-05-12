@@ -1,32 +1,49 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { href: "/work", label: "Work" },
+  { href: "/writing", label: "Writing" },
+  { href: "/about", label: "About" },
+];
 
 export default function Nav() {
+  const pathname = usePathname();
+
   return (
     <header className="w-full border-b border-gray-100">
       <nav className="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
-        <Link href="/" className="text-sm font-medium text-gray-900 hover:opacity-60 transition-opacity">
+        <Link href="/" className="text-sm font-medium text-gray-900 hover:text-navy transition-colors">
           Meet Rajguru
         </Link>
         <div className="flex items-center gap-8">
-          <Link href="/work" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            Work
-          </Link>
-          <Link href="/writing" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            Writing
-          </Link>
-          <Link href="/about" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            About
-          </Link>
+          {navLinks.map(({ href, label }) => {
+            const active = pathname === href || pathname.startsWith(href + "/");
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`text-sm transition-colors ${
+                  active
+                    ? "text-navy underline decoration-navy underline-offset-4"
+                    : "text-gray-500 hover:text-navy"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <a
             href="mailto:mt.rajguru@gmail.com"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-sm text-gray-500 hover:text-navy transition-colors"
           >
             Contact
           </a>
           <a
             href="/resume.pdf"
             download
-            className="text-sm text-gray-900 font-medium border border-gray-200 rounded-md px-3 py-1.5 hover:bg-gray-50 transition-colors"
+            className="text-sm text-white font-medium bg-navy rounded-md px-3 py-1.5 hover:bg-navy-dark transition-colors"
           >
             Resume
           </a>

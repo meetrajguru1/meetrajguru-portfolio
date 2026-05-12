@@ -43,7 +43,7 @@ export default function AboutPage() {
             <span className="text-sm text-gray-400 w-24">Email</span>
             <a
               href="mailto:mt.rajguru@gmail.com"
-              className="text-sm text-gray-900 hover:opacity-60 transition-opacity underline underline-offset-2"
+              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
             >
               mt.rajguru@gmail.com
             </a>
@@ -54,7 +54,7 @@ export default function AboutPage() {
               href="https://www.linkedin.com/in/meet-rajguru-879096a1/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-900 hover:opacity-60 transition-opacity underline underline-offset-2"
+              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
             >
               linkedin.com/in/meet-rajguru-879096a1
             </a>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <a
               href="/resume.pdf"
               download
-              className="text-sm text-gray-900 hover:opacity-60 transition-opacity underline underline-offset-2"
+              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
             >
               Download PDF
             </a>

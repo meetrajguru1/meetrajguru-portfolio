@@ -11,7 +11,7 @@ export default function VodafoneNBNPage() {
     <div className="max-w-2xl mx-auto px-6 py-20">
       <Link
         href="/work"
-        className="text-sm text-gray-400 hover:text-gray-900 transition-colors mb-10 inline-block"
+        className="text-sm text-navy hover:text-navy-dark transition-colors mb-10 inline-block"
       >
         ← Work
       </Link>

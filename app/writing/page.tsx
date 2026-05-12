@@ -22,7 +22,7 @@ export default function WritingPage() {
             <div className="flex items-baseline justify-between gap-4 mb-2">
               <Link
                 href={`/writing/${post.slug}`}
-                className="text-base font-medium text-gray-900 hover:opacity-60 transition-opacity"
+                className="text-base font-medium text-navy hover:text-navy-dark transition-colors"
               >
                 {post.title}
               </Link>

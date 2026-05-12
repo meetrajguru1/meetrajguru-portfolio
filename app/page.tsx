@@ -52,23 +52,26 @@ export default function Home() {
 
       {/* Selected work */}
       <section className="mb-24">
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-8">
+        <h2 className="text-xs font-medium text-navy uppercase tracking-widest mb-8">
           Selected work
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-4">
           {caseStudies.map((cs) => (
-            <Link key={cs.slug} href="/work" className="block group">
+            <Link
+              key={cs.slug}
+              href="/work"
+              className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
+            >
               <p className="text-xs text-gray-400 mb-1">{cs.company}</p>
-              <h3 className="text-base font-medium text-gray-900 mb-2 group-hover:opacity-60 transition-opacity">
-                {cs.title}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{cs.description}</p>
+              <h3 className="text-base font-medium text-gray-900 mb-2">{cs.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed mb-4">{cs.description}</p>
+              <span className="text-sm text-navy font-medium">Read case study →</span>
             </Link>
           ))}
         </div>
         <Link
           href="/work"
-          className="inline-block mt-8 text-sm text-gray-400 hover:text-gray-900 transition-colors"
+          className="inline-block mt-6 text-sm text-navy hover:text-navy-dark transition-colors"
         >
           See all work →
         </Link>
@@ -76,7 +79,7 @@ export default function Home() {
 
       {/* Recent writing */}
       <section>
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-8">
+        <h2 className="text-xs font-medium text-navy uppercase tracking-widest mb-8">
           Recent writing
         </h2>
         <div className="space-y-5">
@@ -87,7 +90,7 @@ export default function Home() {
               ) : (
                 <Link
                   href={`/writing/${post.slug}`}
-                  className="text-sm text-gray-900 hover:opacity-60 transition-opacity"
+                  className="text-sm text-navy hover:text-navy-dark transition-colors"
                 >
                   {post.title}
                 </Link>
@@ -98,7 +101,7 @@ export default function Home() {
         </div>
         <Link
           href="/writing"
-          className="inline-block mt-8 text-sm text-gray-400 hover:text-gray-900 transition-colors"
+          className="inline-block mt-8 text-sm text-navy hover:text-navy-dark transition-colors"
         >
           See all writing →
         </Link>
