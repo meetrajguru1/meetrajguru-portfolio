@@ -40,7 +40,7 @@ export default function Home() {
     <div className="max-w-2xl mx-auto px-6 py-20">
       {/* Hero */}
       <section className="mb-24">
-        <p className="text-sm text-gray-400 mb-3 tracking-wide">Product manager</p>
+        <p className="text-sm text-gray-400 mb-3 tracking-wide">Aspiring product manager</p>
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
           Building products people actually want to use.
         </h1>
