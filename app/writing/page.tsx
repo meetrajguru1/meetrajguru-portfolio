@@ -7,27 +7,52 @@ export const metadata: Metadata = {
   title: "Writing · Portfolio",
 };
 
+function MobileBio() {
+  return (
+    <div className="flex items-center gap-4 pb-8 mb-8 border-b border-gray-100 lg:hidden">
+      <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
+        <Image
+          src="/meet.jpg"
+          alt="Meet Rajguru"
+          width={48}
+          height={48}
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div>
+        <p className="text-sm font-semibold text-gray-900">Meet Rajguru</p>
+        <p className="text-xs text-gray-500 leading-relaxed mt-0.5">
+          Aspiring PM. Writing about products, career transitions, and what I&apos;m learning.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function Sidebar() {
   return (
-    <aside className="w-full lg:w-64 shrink-0">
-      <div className="lg:sticky lg:top-12 space-y-5">
-        <div className="flex flex-col items-start gap-4">
-          <Image
-            src="/meet.jpg"
-            alt="Meet Rajguru"
-            width={72}
-            height={72}
-            className="rounded-full object-cover"
-          />
+    <aside className="hidden lg:block w-56 shrink-0">
+      <div className="sticky top-12 bg-white border border-gray-100 rounded-xl p-6 space-y-5">
+        <div className="flex flex-col items-center text-center gap-3">
+          <div className="w-20 h-20 rounded-full overflow-hidden">
+            <Image
+              src="/meet.jpg"
+              alt="Meet Rajguru"
+              width={80}
+              height={80}
+              className="object-cover w-full h-full"
+            />
+          </div>
           <div>
             <p className="text-sm font-semibold text-gray-900">Meet Rajguru</p>
-            <p className="text-sm text-gray-500 leading-relaxed mt-1">
-              Aspiring PM. Marketing graduate from UTS Sydney. Writing about products, career transitions, and what I'm learning.
+            <p className="text-xs text-gray-500 leading-relaxed mt-1">
+              Aspiring PM. Marketing graduate from UTS Sydney. Writing about products, career
+              transitions, and what I&apos;m learning.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col items-center gap-2">
           <a
             href="https://www.linkedin.com/in/meet-rajguru-879096a1/"
             target="_blank"
@@ -44,11 +69,17 @@ function Sidebar() {
           </a>
         </div>
 
-        <div className="border-t border-gray-100 pt-5">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">On this site</p>
-          <div className="flex flex-col gap-2">
-            <Link href="/work" className="text-sm text-navy hover:text-navy-dark transition-colors">Work</Link>
-            <Link href="/about" className="text-sm text-navy hover:text-navy-dark transition-colors">About</Link>
+        <div className="border-t border-gray-100 pt-4">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 text-center">
+            On this site
+          </p>
+          <div className="flex flex-col items-center gap-2">
+            <Link href="/work" className="text-sm text-navy hover:text-navy-dark transition-colors">
+              Work
+            </Link>
+            <Link href="/about" className="text-sm text-navy hover:text-navy-dark transition-colors">
+              About
+            </Link>
           </div>
         </div>
       </div>
@@ -68,6 +99,7 @@ export default function WritingPage() {
 
       <div className="flex flex-col lg:flex-row gap-16">
         <div className="flex-1 min-w-0">
+          <MobileBio />
           <div className="space-y-8">
             {posts.map((post) => (
               <article key={post.slug} className="border-t border-gray-100 pt-8">
