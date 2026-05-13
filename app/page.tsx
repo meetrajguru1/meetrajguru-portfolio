@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getAllPosts } from "@/lib/posts";
 
 const caseStudies = [
   {
@@ -17,25 +18,9 @@ const caseStudies = [
   },
 ];
 
-const recentPosts = [
-  {
-    slug: "how-i-think-about-prioritization",
-    title: "How I think about prioritization",
-    date: "May 2026",
-  },
-  {
-    slug: "placeholder-2",
-    title: "What good discovery actually looks like",
-    date: "Coming soon",
-  },
-  {
-    slug: "placeholder-3",
-    title: "Why metrics are the beginning of the conversation, not the end",
-    date: "Coming soon",
-  },
-];
-
 export default function Home() {
+  const recentPosts = getAllPosts().slice(0, 3);
+
   return (
     <div className="max-w-[800px] mx-auto px-6 pt-32 pb-20">
       {/* Hero */}
@@ -86,17 +71,15 @@ export default function Home() {
         <div className="space-y-5">
           {recentPosts.map((post) => (
             <div key={post.slug} className="flex items-baseline justify-between gap-4">
-              {post.date === "Coming soon" ? (
-                <span className="text-sm text-gray-400">{post.title}</span>
-              ) : (
-                <Link
-                  href={`/writing/${post.slug}`}
-                  className="text-sm text-navy hover:text-navy-dark transition-colors"
-                >
-                  {post.title}
-                </Link>
-              )}
-              <span className="text-xs text-gray-400 shrink-0">{post.date}</span>
+              <Link
+                href={`/writing/${post.slug}`}
+                className="text-sm text-navy hover:text-navy-dark transition-colors"
+              >
+                {post.title}
+              </Link>
+              <span className="text-xs text-gray-400 shrink-0">
+                {new Date(post.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
+              </span>
             </div>
           ))}
         </div>
