@@ -37,7 +37,7 @@ const caseStudies = [
 
 export default function WorkPage() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-20">
+    <div className="max-w-[800px] mx-auto px-6 py-20">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">Work</h1>
       <p className="text-gray-500 mb-16 leading-relaxed">
         A selection of product case studies. Each one covers the problem, the process, and what I
@@ -78,6 +78,7 @@ export default function WorkPage() {
               key={i}
               href={`/work/${cs.slug}`}
               className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
+              style={{ borderLeftWidth: '4px', borderLeftColor: '#1B3A6B' }}
             >
               {cardContent}
             </Link>
@@ -85,6 +86,7 @@ export default function WorkPage() {
             <article
               key={i}
               className="bg-gray-50 border border-gray-100 rounded-lg p-6"
+              style={{ borderLeftWidth: '4px', borderLeftColor: '#1B3A6B' }}
             >
               {cardContent}
             </article>

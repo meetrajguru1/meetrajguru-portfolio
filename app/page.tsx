@@ -37,11 +37,11 @@ const recentPosts = [
 
 export default function Home() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-20">
+    <div className="max-w-[800px] mx-auto px-6 pt-32 pb-20">
       {/* Hero */}
       <section className="mb-24">
         <p className="text-sm text-gray-400 mb-3 tracking-wide">Aspiring product manager</p>
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+        <h1 className="text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
           Building products people actually want to use.
         </h1>
         <p className="text-gray-500 leading-relaxed text-lg">
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Selected work */}
       <section className="mb-24">
-        <h2 className="text-xs font-medium text-navy uppercase tracking-widest mb-8">
+        <h2 className="text-sm font-semibold text-navy uppercase tracking-widest mb-8">
           Selected work
         </h2>
         <div className="space-y-4">
@@ -61,6 +61,7 @@ export default function Home() {
               key={cs.slug}
               href="/work"
               className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
+              style={{ borderLeftWidth: '4px', borderLeftColor: '#1B3A6B' }}
             >
               <p className="text-xs text-gray-400 mb-1">{cs.company}</p>
               <h3 className="text-base font-medium text-gray-900 mb-2">{cs.title}</h3>
@@ -79,7 +80,7 @@ export default function Home() {
 
       {/* Recent writing */}
       <section>
-        <h2 className="text-xs font-medium text-navy uppercase tracking-widest mb-8">
+        <h2 className="text-sm font-semibold text-navy uppercase tracking-widest mb-8">
           Recent writing
         </h2>
         <div className="space-y-5">
