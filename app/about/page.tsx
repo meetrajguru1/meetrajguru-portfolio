@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About · Portfolio",
@@ -8,12 +7,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-[800px] mx-auto px-6 py-20">
-      <Image
+      <img
         src="/meet.jpg"
         alt="Meet Rajguru"
-        width={96}
-        height={96}
-        className="rounded-full object-cover mb-8"
+        className="w-24 h-24 rounded-full object-cover mb-8"
       />
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-12">About</h1>
 

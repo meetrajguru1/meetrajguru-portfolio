@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -10,15 +9,11 @@ export const metadata: Metadata = {
 function MobileBio() {
   return (
     <div className="flex items-center gap-4 pb-8 mb-8 border-b border-gray-100 lg:hidden">
-      <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-        <Image
-          src="/meet.jpg"
-          alt="Meet Rajguru"
-          width={48}
-          height={48}
-          className="object-cover w-full h-full"
-        />
-      </div>
+      <img
+        src="/meet.jpg"
+        alt="Meet Rajguru"
+        className="w-12 h-12 rounded-full object-cover shrink-0"
+      />
       <div>
         <p className="text-sm font-semibold text-gray-900">Meet Rajguru</p>
         <p className="text-xs text-gray-500 leading-relaxed mt-0.5">
@@ -34,15 +29,11 @@ function Sidebar() {
     <aside className="hidden lg:block w-56 shrink-0">
       <div className="sticky top-12 bg-white border border-gray-100 rounded-xl p-6 space-y-5">
         <div className="flex flex-col items-center text-center gap-3">
-          <div className="w-20 h-20 rounded-full overflow-hidden">
-            <Image
-              src="/meet.jpg"
-              alt="Meet Rajguru"
-              width={80}
-              height={80}
-              className="object-cover w-full h-full"
-            />
-          </div>
+          <img
+            src="/meet.jpg"
+            alt="Meet Rajguru"
+            className="w-20 h-20 rounded-full object-cover"
+          />
           <div>
             <p className="text-sm font-semibold text-gray-900">Meet Rajguru</p>
             <p className="text-xs text-gray-500 leading-relaxed mt-1">
