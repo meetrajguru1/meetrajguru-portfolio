@@ -171,6 +171,8 @@ export default function InstagramDetoxPage() {
   const [answers, setAnswers] = useState<number[]>([]);
   const [openDay, setOpenDay] = useState<number | null>(null);
   const [copied, setCopied] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const totalScore = answers.reduce((sum, pts) => sum + pts, 0);
   const tier = getTier(totalScore);
@@ -193,6 +195,8 @@ export default function InstagramDetoxPage() {
     setAnswers([]);
     setOpenDay(null);
     setCopied(false);
+    setEmail("");
+    setEmailSubmitted(false);
   }
 
   function handleShare() {
@@ -355,6 +359,40 @@ export default function InstagramDetoxPage() {
           >
             Take it again
           </button>
+        </div>
+
+        {/* Email interest capture */}
+        <div className="border border-gray-200 rounded-md p-5 bg-gray-50">
+          {emailSubmitted ? (
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Got it — I'll let you know when the daily emails launch.
+            </p>
+          ) : (
+            <>
+              <p className="text-sm font-semibold text-gray-900 mb-1">
+                Want me to email you this plan as daily reminders?
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                Drop your email below — I'll send you one short reminder per day,
+                then leave you alone.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  className="flex-1 text-sm px-4 py-2.5 rounded-md border border-gray-200 bg-white focus:outline-none focus:border-navy placeholder:text-gray-300"
+                />
+                <button
+                  onClick={() => { if (email.trim()) setEmailSubmitted(true); }}
+                  className="bg-navy text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-navy-dark transition-colors whitespace-nowrap"
+                >
+                  Notify me
+                </button>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Disclaimer */}
