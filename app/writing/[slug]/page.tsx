@@ -40,7 +40,7 @@ export default async function PostPage({ params }: Props) {
   });
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-20">
+    <div className="max-w-2xl mx-auto px-6 py-12 sm:py-16 md:py-20">
       <Link
         href="/writing"
         className="text-sm text-gray-400 hover:text-gray-900 transition-colors mb-12 inline-block"

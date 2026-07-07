@@ -13,14 +13,14 @@ export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
 
   return (
-    <div className="max-w-[800px] mx-auto px-6 pt-32 pb-20">
+    <div className="max-w-[800px] mx-auto px-6 pt-16 sm:pt-24 md:pt-32 pb-20">
       {/* Hero */}
-      <section className="mb-24">
+      <section className="mb-16 sm:mb-20 md:mb-24">
         <p className="text-sm text-gray-400 mb-3 tracking-wide">Product-minded, marketing-trained</p>
-        <h1 className="text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
           I close the gap between what a product offers and how people actually experience it.
         </h1>
-        <p className="text-gray-500 leading-relaxed text-lg">
+        <p className="text-gray-500 leading-relaxed text-base sm:text-lg">
           Master's in Marketing from UTS Sydney, with hands-on experience across CRM, digital
           marketing, and retail. I've spent years on the customer side of the screen, and I'm now
           bringing that perspective into product management — through research, case studies, and
@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* Selected work */}
-      <section className="mb-24">
+      <section className="mb-16 sm:mb-20 md:mb-24">
         <h2 className="text-sm font-semibold text-navy uppercase tracking-widest mb-8">
           Selected work
         </h2>
