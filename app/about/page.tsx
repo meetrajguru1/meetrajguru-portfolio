@@ -12,7 +12,7 @@ export default function AboutPage() {
         alt="Meet Rajguru"
         className="w-24 h-24 rounded-full object-cover mb-8"
       />
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-12">About</h1>
+      <h1 className="text-4xl font-extrabold tracking-tighter text-gray-900 mb-12">About</h1>
 
       <div className="space-y-6 text-gray-500 leading-relaxed">
         <p>
@@ -40,36 +40,36 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-100">
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-6">
+        <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-6">
           Elsewhere
         </h2>
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-400 w-24">Email</span>
+            <span className="font-mono text-xs text-gray-400 w-24">Email</span>
             <a
               href="mailto:mt.rajguru@gmail.com"
-              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
+              className="text-sm text-accent hover:text-accent-dark transition-colors underline underline-offset-2"
             >
               mt.rajguru@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-400 w-24">LinkedIn</span>
+            <span className="font-mono text-xs text-gray-400 w-24">LinkedIn</span>
             <a
               href="https://www.linkedin.com/in/meet-rajguru-879096a1/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
+              className="text-sm text-accent hover:text-accent-dark transition-colors underline underline-offset-2"
             >
               linkedin.com/in/meet-rajguru-879096a1
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-400 w-24">Resume</span>
+            <span className="font-mono text-xs text-gray-400 w-24">Resume</span>
             <a
               href="/resume.pdf"
               download
-              className="text-sm text-navy hover:text-navy-dark transition-colors underline underline-offset-2"
+              className="text-sm text-accent hover:text-accent-dark transition-colors underline underline-offset-2"
             >
               Download PDF
             </a>
