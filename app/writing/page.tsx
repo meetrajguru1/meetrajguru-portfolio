@@ -82,7 +82,7 @@ export default function WritingPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="max-w-[800px] mx-auto px-6 py-20">
+    <div className="max-w-[800px] mx-auto px-6 py-12 sm:py-16 md:py-20">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">Writing</h1>
       <p className="text-gray-500 mb-16 leading-relaxed">
         Notes on product management, decision-making, and building things.

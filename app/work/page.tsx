@@ -40,7 +40,7 @@ const caseStudies = [
 
 export default function WorkPage() {
   return (
-    <div className="max-w-[800px] mx-auto px-6 py-20">
+    <div className="max-w-[800px] mx-auto px-6 py-12 sm:py-16 md:py-20">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">Work</h1>
       <p className="text-gray-500 mb-16 leading-relaxed">
         A selection of product case studies. Each one covers the problem, the process, and what I

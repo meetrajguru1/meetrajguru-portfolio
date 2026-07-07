@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-[800px] mx-auto px-6 py-20">
+    <div className="max-w-[800px] mx-auto px-6 py-12 sm:py-16 md:py-20">
       <img
         src="/meet.jpg"
         alt="Meet Rajguru"

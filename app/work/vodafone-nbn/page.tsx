@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function VodafoneNBNPage() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-20">
+    <div className="max-w-2xl mx-auto px-6 py-12 sm:py-16 md:py-20">
       <Link
         href="/work"
         className="text-sm text-navy hover:text-navy-dark transition-colors mb-10 inline-block"
