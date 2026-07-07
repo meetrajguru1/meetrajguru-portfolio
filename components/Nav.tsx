@@ -19,7 +19,7 @@ export default function Nav() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="text-sm font-medium text-gray-900 hover:text-navy transition-colors"
+          className="text-sm font-bold tracking-tight text-gray-900 hover:text-accent transition-colors"
         >
           Meet Rajguru
         </Link>
@@ -34,8 +34,8 @@ export default function Nav() {
                 href={href}
                 className={`text-sm transition-colors ${
                   active
-                    ? "text-navy underline decoration-navy underline-offset-4"
-                    : "text-gray-500 hover:text-navy"
+                    ? "text-accent underline decoration-accent underline-offset-4"
+                    : "text-gray-500 hover:text-accent"
                 }`}
               >
                 {label}
@@ -44,14 +44,14 @@ export default function Nav() {
           })}
           <a
             href="mailto:mt.rajguru@gmail.com"
-            className="text-sm text-gray-500 hover:text-navy transition-colors"
+            className="text-sm text-gray-500 hover:text-accent transition-colors"
           >
             Contact
           </a>
           <a
             href="/resume.pdf"
             download
-            className="text-sm text-white font-medium bg-navy rounded-md px-3 py-1.5 hover:bg-navy-dark transition-colors"
+            className="text-sm text-white font-medium bg-accent rounded-md px-3 py-1.5 hover:bg-accent-dark transition-colors"
           >
             Resume
           </a>
@@ -94,7 +94,7 @@ export default function Nav() {
                 href={href}
                 onClick={() => setOpen(false)}
                 className={`text-sm py-2 transition-colors ${
-                  active ? "text-navy font-medium" : "text-gray-500 hover:text-navy"
+                  active ? "text-accent font-medium" : "text-gray-500 hover:text-accent"
                 }`}
               >
                 {label}
@@ -103,14 +103,14 @@ export default function Nav() {
           })}
           <a
             href="mailto:mt.rajguru@gmail.com"
-            className="text-sm text-gray-500 hover:text-navy transition-colors py-2"
+            className="text-sm text-gray-500 hover:text-accent transition-colors py-2"
           >
             Contact
           </a>
           <a
             href="/resume.pdf"
             download
-            className="text-sm text-white font-medium bg-navy rounded-md px-3 py-2 mt-2 text-center hover:bg-navy-dark transition-colors"
+            className="text-sm text-white font-medium bg-accent rounded-md px-3 py-2 mt-2 text-center hover:bg-accent-dark transition-colors"
           >
             Resume
           </a>

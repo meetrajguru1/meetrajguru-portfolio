@@ -49,8 +49,8 @@ export default async function PostPage({ params }: Props) {
       </Link>
 
       <header className="mb-12">
-        <p className="text-sm text-gray-400 mb-3">{formattedDate}</p>
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 leading-tight">
+        <p className="font-mono text-xs text-gray-400 mb-3 uppercase tracking-wide">{formattedDate}</p>
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-gray-900 leading-tight">
           {post.title}
         </h1>
       </header>
