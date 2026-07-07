@@ -14,24 +14,27 @@ const caseStudies = [
     tags: ["Marketing strategy", "Consumer research", "Positioning"],
     description:
       "How I used primary research and competitor analysis to identify why Vodafone was losing the NBN market — and what a repositioning strategy could look like.",
+    inProgress: false,
   },
   {
     slug: null,
-    title: "Redesigning onboarding to cut time-to-value by 40%",
-    company: "Company name",
-    year: "2025",
+    title: "Onboarding and time-to-value",
+    company: "In progress",
+    year: null,
     tags: ["B2C", "Growth", "Research"],
     description:
-      "How we identified the moment users understood the product, then rebuilt the first 10 minutes around it. This covers discovery, prototyping, and measuring success after launch.",
+      "An area I want to dig into next: how products help users reach their first real \"aha\" moment faster, and what gets in the way of that in the first ten minutes.",
+    inProgress: true,
   },
   {
     slug: null,
-    title: "Solving zero-results search for a B2B SaaS product",
-    company: "Company name",
-    year: "2024",
+    title: "Search and findability in B2B products",
+    company: "In progress",
+    year: null,
     tags: ["B2B", "Search", "Retention"],
     description:
-      "A deep-dive into why 30% of searches returned nothing, and how fixing it lifted retention by 12 points. Includes data analysis, cross-functional coordination, and trade-off decisions.",
+      "Another problem space I'm exploring: why search so often fails users in B2B SaaS tools, and how that quietly erodes trust and retention.",
+    inProgress: true,
   },
 ];
 
@@ -49,9 +52,17 @@ export default function WorkPage() {
           const cardContent = (
             <>
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-xs text-gray-400">{cs.company}</span>
-                <span className="text-xs text-gray-300">·</span>
-                <span className="text-xs text-gray-400">{cs.year}</span>
+                {cs.inProgress ? (
+                  <span className="text-xs text-navy font-medium uppercase tracking-wide">
+                    {cs.company}
+                  </span>
+                ) : (
+                  <>
+                    <span className="text-xs text-gray-400">{cs.company}</span>
+                    <span className="text-xs text-gray-300">·</span>
+                    <span className="text-xs text-gray-400">{cs.year}</span>
+                  </>
+                )}
               </div>
               <h2 className="text-xl font-semibold text-gray-900 mb-3 tracking-tight">
                 {cs.title}

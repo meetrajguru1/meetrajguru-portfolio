@@ -1,22 +1,13 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-const caseStudies = [
-  {
-    slug: "redesigning-onboarding",
-    title: "Redesigning onboarding to cut time-to-value by 40%",
-    company: "Company name · 2025",
-    description:
-      "How we identified the moment users understood the product, then rebuilt the first 10 minutes around it.",
-  },
-  {
-    slug: "search-zero-results",
-    title: "Solving zero-results search for a B2B SaaS product",
-    company: "Company name · 2024",
-    description:
-      "A deep-dive into why 30% of searches returned nothing, and how fixing it lifted retention.",
-  },
-];
+const featuredCaseStudy = {
+  slug: "vodafone-nbn",
+  title: "Vodafone NBN — Brand Awareness & Customer Acquisition Strategy",
+  company: "UTS Sydney · Master's Capstone · 2024",
+  description:
+    "How I used primary research and competitor analysis to identify why Vodafone was losing the NBN market — and what a repositioning strategy could look like.",
+};
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
@@ -25,13 +16,15 @@ export default function Home() {
     <div className="max-w-[800px] mx-auto px-6 pt-32 pb-20">
       {/* Hero */}
       <section className="mb-24">
-        <p className="text-sm text-gray-400 mb-3 tracking-wide">Aspiring product manager</p>
+        <p className="text-sm text-gray-400 mb-3 tracking-wide">Product-minded, marketing-trained</p>
         <h1 className="text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-          Building products people actually want to use.
+          I close the gap between what a product offers and how people actually experience it.
         </h1>
         <p className="text-gray-500 leading-relaxed text-lg">
-          Marketing graduate turned aspiring PM. I write about products, career transitions, and
-          what I'm learning along the way. Currently looking for my next opportunity in product.
+          Master's in Marketing from UTS Sydney, with hands-on experience across CRM, digital
+          marketing, and retail. I've spent years on the customer side of the screen, and I'm now
+          bringing that perspective into product management — through research, case studies, and
+          honest writing about what I'm learning along the way.
         </p>
       </section>
 
@@ -40,21 +33,16 @@ export default function Home() {
         <h2 className="text-sm font-semibold text-navy uppercase tracking-widest mb-8">
           Selected work
         </h2>
-        <div className="space-y-4">
-          {caseStudies.map((cs) => (
-            <Link
-              key={cs.slug}
-              href="/work"
-              className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
-              style={{ borderLeftWidth: '4px', borderLeftColor: '#1B3A6B' }}
-            >
-              <p className="text-xs text-gray-400 mb-1">{cs.company}</p>
-              <h3 className="text-base font-medium text-gray-900 mb-2">{cs.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-4">{cs.description}</p>
-              <span className="text-sm text-navy font-medium">Read case study →</span>
-            </Link>
-          ))}
-        </div>
+        <Link
+          href={`/work/${featuredCaseStudy.slug}`}
+          className="block bg-gray-50 border border-gray-100 rounded-lg p-6 hover:shadow-md hover:-translate-y-0.5 transition-all"
+          style={{ borderLeftWidth: '4px', borderLeftColor: '#1B3A6B' }}
+        >
+          <p className="text-xs text-gray-400 mb-1">{featuredCaseStudy.company}</p>
+          <h3 className="text-base font-medium text-gray-900 mb-2">{featuredCaseStudy.title}</h3>
+          <p className="text-sm text-gray-500 leading-relaxed mb-4">{featuredCaseStudy.description}</p>
+          <span className="text-sm text-navy font-medium">Read case study →</span>
+        </Link>
         <Link
           href="/work"
           className="inline-block mt-6 text-sm text-navy hover:text-navy-dark transition-colors"
