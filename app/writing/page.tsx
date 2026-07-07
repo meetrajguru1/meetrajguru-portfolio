@@ -48,27 +48,27 @@ function Sidebar() {
             href="https://www.linkedin.com/in/meet-rajguru-879096a1/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-navy hover:text-navy-dark transition-colors"
+            className="text-sm text-accent hover:text-accent-dark transition-colors"
           >
             LinkedIn →
           </a>
           <a
             href="mailto:mt.rajguru@gmail.com"
-            className="text-sm text-navy hover:text-navy-dark transition-colors"
+            className="text-sm text-accent hover:text-accent-dark transition-colors"
           >
             mt.rajguru@gmail.com
           </a>
         </div>
 
         <div className="border-t border-gray-100 pt-4">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3 text-center">
+          <p className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-3 text-center">
             On this site
           </p>
           <div className="flex flex-col items-center gap-2">
-            <Link href="/work" className="text-sm text-navy hover:text-navy-dark transition-colors">
+            <Link href="/work" className="text-sm text-accent hover:text-accent-dark transition-colors">
               Work
             </Link>
-            <Link href="/about" className="text-sm text-navy hover:text-navy-dark transition-colors">
+            <Link href="/about" className="text-sm text-accent hover:text-accent-dark transition-colors">
               About
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function WritingPage() {
 
   return (
     <div className="max-w-[800px] mx-auto px-6 py-12 sm:py-16 md:py-20">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">Writing</h1>
+      <h1 className="text-4xl font-extrabold tracking-tighter text-gray-900 mb-4">Writing</h1>
       <p className="text-gray-500 mb-16 leading-relaxed">
         Notes on product management, decision-making, and building things.
       </p>
@@ -97,11 +97,11 @@ export default function WritingPage() {
                 <div className="flex items-baseline justify-between gap-4 mb-2">
                   <Link
                     href={`/writing/${post.slug}`}
-                    className="text-base font-medium text-navy hover:text-navy-dark transition-colors"
+                    className="text-base font-medium text-accent hover:text-accent-dark transition-colors"
                   >
                     {post.title}
                   </Link>
-                  <span className="text-xs text-gray-400 shrink-0">
+                  <span className="font-mono text-xs text-gray-400 shrink-0">
                     {new Date(post.date).toLocaleDateString("en-US", {
                       month: "long",
                       year: "numeric",

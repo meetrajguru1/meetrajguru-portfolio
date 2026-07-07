@@ -11,22 +11,22 @@ export default function VodafoneNBNPage() {
     <div className="max-w-2xl mx-auto px-6 py-12 sm:py-16 md:py-20">
       <Link
         href="/work"
-        className="text-sm text-navy hover:text-navy-dark transition-colors mb-10 inline-block"
+        className="text-sm text-accent hover:text-accent-dark transition-colors mb-10 inline-block"
       >
         ← Work
       </Link>
 
       <div className="mb-2">
-        <span className="text-xs text-gray-400">UTS Sydney · Master's Capstone · 2024</span>
+        <span className="font-mono text-xs text-gray-400 uppercase tracking-wide">UTS Sydney · Master's Capstone · 2024</span>
       </div>
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4 leading-tight">
+      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-gray-900 mb-4 leading-tight">
         Vodafone NBN — Brand Awareness &amp; Customer Acquisition Strategy
       </h1>
       <div className="flex gap-2 flex-wrap mb-12">
         {["Marketing strategy", "Consumer research", "Positioning"].map((tag) => (
           <span
             key={tag}
-            className="text-xs text-gray-400 border border-gray-200 rounded px-2 py-0.5"
+            className="font-mono text-xs text-accent bg-accent/5 border border-accent/20 rounded px-2 py-0.5"
           >
             {tag}
           </span>
@@ -46,7 +46,7 @@ export default function VodafoneNBNPage() {
 
       <div className="space-y-12">
         <section>
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             A bit of context
           </h2>
           <p className="text-gray-600 leading-relaxed">
@@ -58,7 +58,7 @@ export default function VodafoneNBNPage() {
         </section>
 
         <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             The problem — in plain English
           </h2>
           <p className="text-gray-600 leading-relaxed">
@@ -70,7 +70,7 @@ export default function VodafoneNBNPage() {
         </section>
 
         <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             What I did
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -86,7 +86,7 @@ export default function VodafoneNBNPage() {
         </section>
 
         <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             What I found surprising
           </h2>
           <p className="text-gray-600 leading-relaxed">
@@ -99,7 +99,7 @@ export default function VodafoneNBNPage() {
         </section>
 
         <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             What I recommended
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
@@ -127,7 +127,7 @@ export default function VodafoneNBNPage() {
         </section>
 
         <section className="border-t border-gray-100 pt-10">
-          <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">
+          <h2 className="font-mono text-xs font-semibold text-accent uppercase tracking-widest mb-4">
             What I took away from this
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
